@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Dev.to Dark Activator",
+    "short_name": "devto-dark",
+    "description": "A small Chrome Extension to activate the Darkmode Beta on dev.to",
+    "version": "0.0.1",
+    "minimum_chrome_version": "60",
+    "permissions": [
+       "https://dev.to/",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://dev.to/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "assets/dev.ico",
+        "48": "assets/dev.ico",
+        "128": "assets/dev.ico"
+    }
+}
